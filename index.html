@@ -1,10 +1,227 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/css/index.css" />
+    <title>Irene Sánchez - Portfolio</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        background-color: #f8f8f8;
+        color: #1a1a1a;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 40px;
+      }
+
+      header {
+        margin-bottom: 80px;
+      }
+
+      h1 {
+        font-size: 4rem;
+        font-weight: 300;
+        letter-spacing: -2px;
+        margin-bottom: 40px;
+        line-height: 1;
+      }
+
+      .name-first {
+        display: block;
+      }
+
+      .name-last {
+        display: block;
+      }
+
+      nav {
+        margin-top: 30px;
+      }
+
+      nav a {
+        color: #1a1a1a;
+        text-decoration: none;
+        font-size: 1.1rem;
+        margin-right: 30px;
+        transition: opacity 0.3s ease;
+      }
+
+      nav a:hover {
+        opacity: 0.6;
+      }
+
+      section {
+        margin-bottom: 100px;
+      }
+
+      h2 {
+        font-size: 2rem;
+        font-weight: 400;
+        margin-bottom: 40px;
+      }
+
+      .about-content {
+        max-width: 700px;
+        font-size: 1.1rem;
+        line-height: 1.8;
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+        margin-top: 40px;
+      }
+
+      .project-card {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .project-image {
+        width: 100%;
+        height: 250px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.2rem;
+      }
+
+      .project-card:nth-child(2) .project-image {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      }
+
+      .project-card:nth-child(3) .project-image {
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      }
+
+      .project-info {
+        padding: 25px;
+      }
+
+      .project-title {
+        font-size: 1.3rem;
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+
+      .project-description {
+        color: #666;
+        font-size: 0.95rem;
+      }
+
+      footer {
+        text-align: center;
+        padding: 40px 0;
+        color: #666;
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        .container {
+          padding: 40px 20px;
+        }
+
+        nav a {
+          display: block;
+          margin-bottom: 15px;
+        }
+
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <header>
+        <h1>
+          <span class="name-first">IRENE</span>
+          <span class="name-last">SÁNCHEZ</span>
+        </h1>
+        <nav>
+          <a href="#proyectos">proyectos.</a>
+          <a href="#sobre-mi">sobre mi.</a>
+        </nav>
+      </header>
+
+      <section id="proyectos">
+        <h2>proyectos.</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image">Proyecto 1</div>
+            <div class="project-info">
+              <div class="project-title">Branding & Identidad</div>
+              <div class="project-description">
+                Desarrollo de identidad visual completa para marca emergente
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">Proyecto 2</div>
+            <div class="project-info">
+              <div class="project-title">Campaña Publicitaria</div>
+              <div class="project-description">
+                Dirección creativa y diseño de campaña digital
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">Proyecto 3</div>
+            <div class="project-info">
+              <div class="project-title">Diseño Editorial</div>
+              <div class="project-description">
+                Maquetación y diseño de revista digital
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sobre-mi">
+        <h2>sobre mi.</h2>
+        <div class="about-content">
+          <p>
+            ¡Hola! Soy Irene y estoy cursando mi tercer año del Grado en
+            Multimedia y Diseño Gráfico en la Universidad UDIT.
+          </p>
+          <p style="margin-top: 20px">
+            Me apasionan el branding, la identidad de marca, la publicidad y la
+            dirección creativa, y disfruto explorando cómo el diseño puede
+            potenciar la comunicación y la estrategia visual.
+          </p>
+        </div>
+      </section>
+
+      <footer>
+        <p>© 2024 Irene Sánchez. Todos los derechos reservados.</p>
+      </footer>
+    </div>
+  </body>
 </html>
