@@ -2,39 +2,37 @@
   background-color: var(--color-dark);
   color: var(--color-light);
   text-align: center;
-  padding: 3rem 2rem;
-  min-height: 40vh;
+  padding: 2rem 4rem;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 3rem;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
 }
 
 .brand {
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   letter-spacing: 2px;
 }
 
 .nav ul {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
   list-style: none;
 }
 
 .nav a {
   color: var(--color-light);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
   transition: opacity 0.3s ease;
 }
 
@@ -42,26 +40,34 @@
   opacity: 0.7;
 }
 
+.hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 4.5rem;
+  margin-bottom: 2rem;
   font-weight: normal;
+  letter-spacing: 1px;
 }
 
 .hero-content p {
-  font-size: 1rem;
-  max-width: 600px;
+  font-size: 1.1rem;
+  max-width: 700px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
 }
 
 .selected-work,
 .about-me,
 .info-tabs,
 .process {
-  padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 3rem 4rem;
 }
 
 .selected-work h2,
