@@ -1,14 +1,135 @@
 /* Placeholders for images */
 .ph {
-  background-color: #c5cdde;
+  background-color: #bec8dd;
   width: 100%;
   height: 220px;
   border-radius: 4px;
   aspect-ratio: auto;
 }
 
+.about-me .ph {
+  width: 265px;
+  height: 265px;
+}
+
 .grid-process .ph {
   height: 150px;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+}
+
+.star-icon {
+  color: #f0f0f0;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle:hover .star-icon {
+  transform: rotate(45deg);
+}
+
+body.dark-mode .star-icon {
+  color: #2b1b18;
+}
+
+body.dark-mode {
+  --color-bg: #1a1a1a;
+  --color-dark: #f0f0f0;
+  --color-accent: #333333;
+  --color-light: #2a2a2a;
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+body.dark-mode .hero {
+  background-color: #1a1a1a;
+}
+
+body.dark-mode .selected-work h2,
+body.dark-mode .about-me h2,
+body.dark-mode .process h2 {
+  color: #f0f0f0;
+}
+
+body.dark-mode .info-tabs li {
+  border-bottom-color: #f0f0f0;
+}
+
+body.dark-mode .work-card {
+  background-color: #333333;
+}
+
+body.dark-mode .work-image {
+  background-color: #2a2a2a;
+}
+
+body.dark-mode .work-label {
+  background-color: #333333;
+  color: #f0f0f0;
+}
+
+body.dark-mode .footer {
+  background-color: #1a1a1a;
+}
+
+/* Work Cards */
+.work-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #bec8dd;
+  height: 100%;
+  aspect-ratio: 1;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.work-image {
+  flex: 1;
+  background-color: #f7ecd8;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease;
+}
+
+.work-label {
+  padding: 1.5rem;
+  background-color: #bec8dd;
+  color: #2b1b18;
+  font-weight: 400;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.work-card:hover .work-image {
+  background-color: #bec8dd;
+}
+
+.work-card:hover .work-label {
+  background-color: #a0a8c0;
+  color: var(--color-light);
 }
 
 .btn {
@@ -18,7 +139,7 @@
   border-radius: 25px;
   text-decoration: none;
   color: var(--color-dark);
-  font-weight: bold;
+  font-weight: 400;
   font-size: 0.9rem;
   text-transform: lowercase;
   transition: all 0.3s ease;
