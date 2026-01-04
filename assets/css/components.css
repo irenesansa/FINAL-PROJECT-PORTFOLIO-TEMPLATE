@@ -97,6 +97,7 @@ body.dark-mode .footer {
   aspect-ratio: 1;
   transition: all 0.3s ease;
   cursor: pointer;
+  position: relative;
 }
 
 .work-image {
@@ -105,26 +106,33 @@ body.dark-mode .footer {
   background-size: cover;
   background-position: center;
   transition: all 0.3s ease;
+  width: 100%;
 }
 
 .work-label {
-  padding: 1.5rem;
-  background-color: #bec8dd;
+  padding: 1rem 1.5rem;
+  background-color: rgba(190, 200, 221, 0.9);
   color: #2b1b18;
   font-weight: 400;
-  font-size: 0.85rem;
+  font-size: 50px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transform: translateY(100%);
 }
 
-.work-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+.work-card:hover .work-label {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .work-card:hover .work-image {
-  background-color: #bec8dd;
+  filter: blur(4px);
 }
 
 .work-card:hover .work-label {

@@ -17,3 +17,12 @@ themeToggle.addEventListener("click", () => {
   const isDarkMode = body.classList.contains("dark-mode");
   localStorage.setItem("theme", isDarkMode ? "dark" : "light");
 });
+// Scroll to top functionality
+const scrollToTopBtn = document.getElementById("scrollToTop");
+
+scrollToTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
