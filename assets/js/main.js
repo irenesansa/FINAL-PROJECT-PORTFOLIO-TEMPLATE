@@ -30,36 +30,67 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Modal scroll to top functionality
+  const modalScrollToTopBtn = document.getElementById("modalScrollToTop");
+
+  modalScrollToTopBtn.addEventListener("click", () => {
+    const modal = document.getElementById("projectModal");
+    modal.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+
+  // Accordion functionality for info tabs
+  const tabHeaders = document.querySelectorAll(".tab-header");
+
+  tabHeaders.forEach((header) => {
+    header.addEventListener("click", () => {
+      const tabItem = header.parentElement;
+      const isActive = tabItem.classList.contains("active");
+
+      // Close all tabs
+      document.querySelectorAll(".tab-item").forEach((item) => {
+        item.classList.remove("active");
+      });
+
+      // Open clicked tab if it wasn't active
+      if (!isActive) {
+        tabItem.classList.add("active");
+      }
+    });
+  });
+
   // Project data
   const projectData = {
     nogue: {
       title: "NOGUE",
-      category: "Wireframes, Identidad Visual y Dirección Creativa",
+      category: "Wireframes, Visual Identity and Creative Direction",
       description:
-        "Proyecto académico desarrollado para el curso de Diseño Editorial. NOGUE es una revista satírica que critica la moda y la cultura del consumo a través de la parodia, la fotografía y un diseño gráfico audaz. Creamos todo el contenido —incluyendo visuales, maquetación y dirección de arte— con una estética inspirada en el hazlo tú mismo (DIY).",
+        "Academic project developed for the Editorial Design course. NOGUE is a satirical magazine that critiques fashion and consumer culture through parody, photography, and bold graphic design. We created all the content—including visuals, layout, and art direction—with an aesthetic inspired by the DIY (do it yourself) ethos.",
       mainImage: "https://ik.imagekit.io/photoiss/portada.jpg",
     },
     greeno: {
       title: "GREENO",
       category: "App Development, UX/UI Design",
       description:
-        "MORE CONTROL OF RECEIPTS BY GETTING EVERYTHING ON YOUR SMARTPHONE NO NEED TO SEND TO YOUR EMAIL PAPER RECEIPTS THEY ALREADY START THE DECOMPOSITION PROCESS AND YOU LOSE ALL THE INFORMATION. EL OBJETIVO DE GREENO BUSCA LA CONEXIÓN DEL CONSUMIDOR CON LA CONEXIÓN SOSTENIBLE. ELIMINANDO LA IMPRESIÓN DE TICKETS Y AYUDANDO AL NEGOCIO CON LA IMPRESIÓN DE MÚLTIPLES ALBARANES DE CARGA Y DESCARGA DE PRODUCTOS.",
+        "MORE CONTROL OF RECEIPTS BY GETTING EVERYTHING ON YOUR SMARTPHONE. NO NEED TO SEND TO YOUR EMAIL. PAPER RECEIPTS START THE DECOMPOSITION PROCESS AND YOU LOSE ALL THE INFORMATION. GREENO'S OBJECTIVE IS TO CONNECT CONSUMERS WITH SUSTAINABLE PRACTICES, ELIMINATING RECEIPT PRINTING AND HELPING BUSINESSES WITH THE PRINTING OF MULTIPLE PRODUCT LOADING AND UNLOADING DELIVERY NOTES.",
       mainImage:
         "https://ik.imagekit.io/photoiss/Captura%20de%20pantalla%202025-09-08%20a%20las%2018.58.19.png",
     },
     starbucks: {
       title: "STARBUCKS",
-      category: "Campaña Gráfica, Dirección Creativa",
+      category: "Graphic Campaign, Creative Direction",
       description:
-        "CAMPAÑA GRÁFICA PARA STARBUCKS SOBRE LA CULTURA DE LA NAVIDAD Y EL CALOR DEL HOGAR EN ESTA FECHA TAN ESPECIAL. SE BUSCA REPRESENTAR LA TRADICIÓN Y LA FAMILIA AMERICANA CON EL SABOR DE LA CULTURA Y LOS MEJORES COMPONENTES Y DESARROLLAR CREAR EMOCIONES EN BASE A LA NOSTALGIA.",
+        "GRAPHIC CAMPAIGN FOR STARBUCKS ABOUT CHRISTMAS CULTURE AND THE WARMTH OF HOME DURING THIS SPECIAL TIME. IT SEEKS TO REPRESENT AMERICAN TRADITION AND FAMILY WITH THE FLAVOR OF CULTURE AND THE BEST INGREDIENTS, CREATING EMOTIONS BASED ON NOSTALGIA.",
       mainImage:
         "https://ik.imagekit.io/photoiss/blanco%20y%20negro%20navidad.png",
     },
     polydor: {
       title: "POLYDOR",
-      category: "Investigación Discográfica, Branding Musical",
+      category: "Discographic Research, Music Branding",
       description:
-        "EL PROYECTO CONSTA DE DESARROLLAR LA CREACIÓN DE LA DISCOGRAFÍA MUSICAL DE LA BANDA BRITÁNICA LITTLE MIX. DONDE SE IDENTIFICAN DE LA MISMA MANERA ALGUNOS ÁLBUMES CONCEPTUALES. GRÁFICA Y DE MANERA CONJUNTA PRESENTANDO LAS CARACTERÍSTICAS DE CADA ÁLBUM QUE ELLAS HAN REALIZADO. EL TRABAJO DESTACA LA HISTORIA DE LA BANDA Y EL PROPIO ÉXITO QUE CONSIGUIÓ AL LLEVARSE POR SER EL PRIMER GRUPO EN GANAR UN FACTOR X EN LA CATEGORÍA DE GRUPO.",
+        "THE PROJECT CONSISTS OF DEVELOPING THE CREATION OF THE MUSICAL DISCOGRAPHY OF THE BRITISH BAND LITTLE MIX. WHERE SOME CONCEPTUAL ALBUMS ARE IDENTIFIED IN THE SAME WAY. GRAPHIC AND JOINTLY PRESENTING THE CHARACTERISTICS OF EACH ALBUM THEY HAVE MADE. THE WORK HIGHLIGHTS THE BAND'S HISTORY AND THE SUCCESS THEY ACHIEVED BY BEING THE FIRST GROUP TO WIN THE X FACTOR IN THE GROUP CATEGORY.",
       mainImage: "https://ik.imagekit.io/photoiss/fotos-01.png",
     },
   };
