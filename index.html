@@ -11,7 +11,7 @@
       <nav class="nav">
         <span class="brand">IRENE SÁNCHEZ</span>
         <ul>
-          <li><a href="work.html">WORK</a></li>
+          <li><a href="#work">WORK</a></li>
           <li><a href="#about">ABOUT ME</a></li>
         </ul>
       </nav>
@@ -40,7 +40,7 @@
     <section id="work" class="selected-work">
       <h2>Selected Work</h2>
       <div class="grid">
-        <div class="work-card">
+        <div class="work-card" data-project="nogue">
           <div
             class="work-image"
             style="
@@ -49,7 +49,7 @@
           ></div>
           <div class="work-label">NOGUE</div>
         </div>
-        <div class="work-card">
+        <div class="work-card" data-project="greeno">
           <div
             class="work-image"
             style="
@@ -58,7 +58,7 @@
           ></div>
           <div class="work-label">GREENO</div>
         </div>
-        <div class="work-card">
+        <div class="work-card" data-project="starbucks">
           <div
             class="work-image"
             style="
@@ -67,7 +67,7 @@
           ></div>
           <div class="work-label">STARBUCKS</div>
         </div>
-        <div class="work-card">
+        <div class="work-card" data-project="polydor">
           <div
             class="work-image"
             style="
@@ -143,6 +143,49 @@
         </div>
       </div>
     </footer>
+
+    <!-- Project Modal -->
+    <div class="project-modal" id="projectModal">
+      <div class="modal-content">
+        <button class="modal-close" id="modalClose">&times;</button>
+        <div class="modal-header">
+          <h1 class="modal-title">Work.</h1>
+        </div>
+        <div class="modal-body">
+          <div class="project-hero">
+            <div class="project-image-large">
+              <div class="ph" id="modalMainImage"></div>
+            </div>
+            <div class="project-title-container">
+              <h2 id="modalProjectTitle"></h2>
+            </div>
+          </div>
+          <div class="project-details">
+            <div class="project-name">
+              <h3 id="modalProjectName"></h3>
+            </div>
+            <div class="project-content">
+              <p class="project-category" id="modalProjectCategory"></p>
+              <p class="project-description" id="modalProjectDescription"></p>
+            </div>
+          </div>
+          <div class="project-gallery" id="modalGallery">
+            <div class="gallery-item"><div class="ph"></div></div>
+            <div class="gallery-item"><div class="ph"></div></div>
+            <div class="gallery-item"><div class="ph"></div></div>
+            <div class="gallery-item"><div class="ph"></div></div>
+          </div>
+          <div class="explore-more">
+            <h3>EXPLORE MORE</h3>
+            <div class="explore-grid">
+              <div class="explore-item"><div class="ph"></div></div>
+              <div class="explore-item"><div class="ph"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="assets/js/main.js"></script>
   </body>
 </html>
