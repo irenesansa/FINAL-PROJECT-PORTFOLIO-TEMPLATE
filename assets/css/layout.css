@@ -254,10 +254,29 @@
 
 .footer-info {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   padding: 0 0rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.github-link {
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.github-link:hover {
+  opacity: 0.7;
+}
+
+.github-icon {
+  display: block;
+}
+
+.footer-info .scroll-to-top {
+  margin-left: auto;
 }
 
 .socials {

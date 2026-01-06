@@ -49,20 +49,20 @@
 }
 
 body.dark-mode .star-icon {
-  color: #2b1b18;
+  color: #061722;
 }
 
 body.dark-mode {
-  --color-bg: #1a1a1a;
+  --color-bg: #061722;
   --color-dark: #f0f0f0;
-  --color-accent: #333333;
-  --color-light: #2a2a2a;
-  background-color: #1a1a1a;
-  color: #f0f0f0;
+  --color-accent: #061722;
+  --color-light: #f7ecd8;
+  background-color: #061722;
+  color: #f7ecd8;
 }
 
 body.dark-mode .hero {
-  background-color: #1a1a1a;
+  background-color: #516796;
 }
 
 body.dark-mode .selected-work h2,
@@ -72,7 +72,21 @@ body.dark-mode .process h2 {
 }
 
 body.dark-mode .info-tabs li {
-  border-bottom-color: #f0f0f0;
+  border-bottom-color: #f7ecd8;
+}
+
+body.dark-mode .tab-header:hover {
+  color: #061722;
+}
+
+body.dark-mode .tab-content {
+  background-color: #f7ecd8;
+  color: #061722;
+}
+
+body.dark-mode .tab-section h4,
+body.dark-mode .tab-section p {
+  color: #061722;
 }
 
 body.dark-mode .work-card {
@@ -80,7 +94,7 @@ body.dark-mode .work-card {
 }
 
 body.dark-mode .work-image {
-  background-color: #2a2a2a;
+  background-color: #f7ecd8;
 }
 
 body.dark-mode .work-label {
@@ -89,7 +103,7 @@ body.dark-mode .work-label {
 }
 
 body.dark-mode .footer {
-  background-color: #1a1a1a;
+  background-color: #516796;
 }
 
 /* Work Cards */
@@ -130,6 +144,27 @@ body.dark-mode .footer {
   right: 0;
   opacity: 0;
   transform: translateY(100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 2rem;
+}
+
+.work-title {
+  font-size: 50px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+}
+
+.work-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-transform: none;
+  opacity: 0.9;
+  text-align: right;
 }
 
 .work-card:hover .work-label {
