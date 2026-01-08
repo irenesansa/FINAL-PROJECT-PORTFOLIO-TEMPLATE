@@ -1,0 +1,121 @@
+# Project metadata - fill this out by Week 4
+# This file will be used to generate your entry in the course showroom
+
+# Basic information
+handle: isansa.design
+name: Irene Sánchez Sara
+email: irenesansa2005@gmail.com
+
+# URLs
+github_url: https://github.com/irenesansa
+# The project_url is usually the LIVE link (GitHub Pages)
+project_url: https://irenesansa.github.io/FINAL-PROJECT-PORTFOLIO-TEMPLATE/
+repository_url: https://github.com/irenesansa/advanced-web-design
+
+# Project details
+title:
+  es: Portfolio – Irene Sánchez
+  en: Portfolio – Irene Sánchez
+
+abstract:
+  es: |
+    Portfolio profesional de diseño gráfico con estética editorial minimalista.
+    Presenta proyectos de diseño editorial, branding, apps y campañas gráficas.
+    Cuenta con modo oscuro/claro persistente, modales interactivos de proyectos,
+    tipografía fluida con clamp(), animaciones CSS suaves y arquitectura modular
+    con el patrón barrel para CSS.  Optimizado para rendimiento con imágenes en CDN
+    y diseño 100% responsive (320px-1920px).
+  en: |
+    Professional graphic design portfolio with a minimalist editorial aesthetic.
+    Showcases projects in editorial design, branding, app design, and graphic campaigns.
+    Features persistent dark/light mode, interactive project modals, fluid typography
+    using clamp(), smooth CSS animations, and modular CSS architecture with barrel pattern.
+    Optimized for performance with CDN-hosted images and fully responsive design (320px-1920px).
+
+# Technical tags (choose relevant ones)
+tags:
+  - html5
+  - css3
+  - vanilla-javascript
+  - responsive-design
+  - accessibility
+  - dark-mode
+  - css-grid
+  - flexbox
+  - fluid-typography
+  - css-animations
+  - local-storage
+  - modular-css
+  - barrel-pattern
+  - intersection-observer
+
+# Learning objectives you're focusing on
+learning_focus:
+  - semantic-html
+  - mobile-first-design
+  - web-accessibility
+  - css-custom-properties
+  - performance-optimization
+  - responsive-images
+  - prefers-reduced-motion
+  - aria-labels
+  - wcag-compliance
+
+# Week tracking (update as you go)
+# Marking all as true since you are ready for final submission
+milestones:
+  week_1_setup: true
+  week_2_brief: true
+  week_4_metadata: true
+  week_5_showcase: true
+
+# Optional: link to your project brief
+brief_url: PROJECT_BRIEF.md
+
+# Additional project information
+features:
+  - Dark/Light theme toggle with localStorage persistence
+  - Interactive project modal system with dynamic galleries
+  - Accordion tabs for CV information (Experience, Education, Skills, Languages)
+  - Circular project navigation ("Explore More" section)
+  - Scroll-triggered animations with Intersection Observer
+  - Custom 404 error page
+  - Fluid typography using CSS clamp()
+  - Reduced motion support for accessibility
+  - Complete meta tags (SEO, Open Graph, Twitter Cards)
+  - Professional README with live deployment link
+
+# Design highlights
+design_system:
+  primary_font: Instrument Serif
+  body_font: Inter
+  color_scheme:
+    light_mode:
+      background: "#f7ecd8"
+      primary: "#4b2424"
+      accent: "#bec8dd"
+    dark_mode:
+      background: "#061722"
+      primary: "#516796"
+      text: "#f0f0f0"
+
+# Project showcase
+projects_featured:
+  - name: NOGUE
+    category: Editorial Design
+    description: Antifashion magazine with DIY aesthetic
+  - name: GREENO
+    category: App Design
+    description: Sustainable receipt management app
+  - name: STARBUCKS
+    category: Illustration Campaign
+    description: Christmas nostalgia graphic campaign
+  - name: POLYDOR
+    category: Rebranding
+    description: Little Mix discographic visual identity
+
+# Social links
+social:
+  instagram: https://www.instagram.com/isansa. design/
+  linkedin: https://www.linkedin.com/in/irene-s%C3%A1nchez-sara-2b5613370/
+  github: https://github.com/irenesansa/advanced-web-design
