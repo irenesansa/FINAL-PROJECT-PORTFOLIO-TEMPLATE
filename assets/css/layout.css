@@ -411,9 +411,10 @@
 
 .project-image-large .ph {
   width: 100%;
-  height: 600px;
+  height: auto;
   background-size: cover;
   background-position: center;
+  aspect-ratio: 1/1;
 }
 
 .project-title-container {
@@ -527,12 +528,14 @@
 
 .gallery-item .ph {
   width: 100%;
-  height: 600px;
+  height: auto;
+  aspect-ratio: 1/1;
 }
 
 .gallery-item:first-child .ph,
 .gallery-item:last-child .ph {
-  height: 600px;
+  height: auto;
+  aspect-ratio: 1/1;
 }
 
 .gallery-item {
@@ -748,6 +751,47 @@
   .project-gallery {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  /* Modal adjustments */
+  .modal-header {
+    padding: 2rem 3rem;
+  }
+
+  .modal-title {
+    font-size: 90px;
+  }
+
+  .modal-body {
+    padding: 2rem 3rem;
+  }
+
+  .modal-close {
+    right: 3rem;
+  }
+
+  .project-image-large .ph {
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+
+  .project-title-container h2 {
+    font-size: 80px;
+  }
+
+  .project-name h3 {
+    font-size: 40px;
+  }
+
+  .gallery-item .ph {
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+
+  .gallery-item:first-child .ph,
+  .gallery-item:last-child .ph {
+    height: auto;
+    aspect-ratio: 1/1;
+  }
 }
 
 /* Mobile landscape and small tablets */
@@ -875,40 +919,54 @@
   }
 
   /* Modal adjustments */
-  .modal-content {
+  .modal-header {
     padding: 2rem;
-    max-width: 95%;
-    max-height: 90vh;
+  }
+
+  .modal-title {
+    font-size: 60px;
+  }
+
+  .modal-body {
+    padding: 2rem;
   }
 
   .modal-close {
     top: 1rem;
-    right: 1rem;
-    font-size: 2rem;
-  }
-
-  .modal-header h1 {
-    font-size: 3rem;
+    right: 1.5rem;
+    font-size: 2.5rem;
   }
 
   .project-hero {
     flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
   }
 
   .project-image-large {
     width: 100%;
+    max-width: 100%;
+  }
+
+  .project-image-large .ph {
+    height: auto;
+    aspect-ratio: 1/1;
   }
 
   .project-title-container {
     width: 100%;
+    justify-content: flex-start;
   }
 
   .project-title-container h2 {
-    font-size: 2rem;
+    font-size: 50px;
+    text-align: left;
   }
 
   .project-details {
     flex-direction: column;
+    gap: 1.5rem;
+    padding-top: 2rem;
   }
 
   .project-name,
@@ -917,20 +975,42 @@
   }
 
   .project-name h3 {
-    font-size: 1.2rem;
+    font-size: 30px;
   }
 
-  .project-content p {
-    font-size: 0.95rem;
+  .project-content {
+    text-align: left;
+  }
+
+  .project-description {
+    text-align: left;
+    margin-left: 0;
+    font-size: 14px;
   }
 
   .project-gallery {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .gallery-item .ph {
+    height: 0 !important;
+    padding-bottom: 100%;
+    aspect-ratio: 1/1;
+  }
+
+  .gallery-item:first-child .ph,
+  .gallery-item:last-child .ph {
+    height: 0 !important;
+    padding-bottom: 100%;
+    aspect-ratio: 1/1;
   }
 
   .explore-more {
     grid-template-columns: 1fr;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
   }
 
   .modal-body .footer {
@@ -940,7 +1020,7 @@
   }
 
   .modal-body .footer h2 {
-    font-size: 2.5rem;
+    font-size: 50px;
   }
 
   .theme-toggle {
@@ -1074,36 +1154,87 @@
   }
 
   /* Modal adjustments for small screens */
-  .modal-content {
-    padding: 1.5rem;
-    max-width: 100%;
-    max-height: 95vh;
+  .modal-header {
+    padding: 1.5rem 1rem;
   }
 
-  .modal-header h1 {
-    font-size: 2.5rem;
+  .modal-title {
+    font-size: 45px;
+  }
+
+  .modal-body {
+    padding: 1.5rem 1rem;
+  }
+
+  .modal-close {
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 2rem;
+  }
+
+  .project-hero {
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .project-image-large .ph {
+    height: 0 !important;
+    padding-bottom: 100%;
+    aspect-ratio: 1/1;
   }
 
   .project-title-container h2 {
-    font-size: 1.75rem;
+    font-size: 40px;
+  }
+
+  .project-details {
+    padding-top: 1.5rem;
+    gap: 1rem;
   }
 
   .project-name h3 {
-    font-size: 1.1rem;
+    font-size: 24px;
+  }
+
+  .project-description {
+    font-size: 13px;
   }
 
   .project-content p {
     font-size: 0.85rem;
   }
 
+  .project-gallery {
+    margin-top: 1.5rem;
+    gap: 1rem;
+  }
+
+  .gallery-item .ph {
+    height: 0 !important;
+    padding-bottom: 100%;
+    aspect-ratio: 1/1;
+  }
+
+  .gallery-item:first-child .ph,
+  .gallery-item:last-child .ph {
+    height: 0 !important;
+    padding-bottom: 100%;
+    aspect-ratio: 1/1;
+  }
+
+  .explore-more {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
   .modal-body .footer {
-    margin-left: -1.5rem;
-    margin-right: -1.5rem;
-    width: calc(100% + 3rem);
+    margin-left: -1rem;
+    margin-right: -1rem;
+    width: calc(100% + 2rem);
   }
 
   .modal-body .footer h2 {
-    font-size: 2rem;
+    font-size: 40px;
   }
 
   .theme-toggle {
